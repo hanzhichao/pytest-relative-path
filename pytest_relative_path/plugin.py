@@ -51,7 +51,6 @@ def pytest_configure(config):
                     if isinstance(item, str) and item.startswith('.'):
                         new_value.append(os.path.abspath(os.path.join(rootdir, now.strftime(item))))
                 setattr(config.option, option, new_value)
-        print(option, value)
 
     # handle relative path ini configs
     ini_cfgs = list(config.inicfg.keys() - EXCLUDE_INI_CFGS)
