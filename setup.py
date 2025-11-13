@@ -2,11 +2,13 @@
 # -*- coding: utf-8 -*-
 
 import os
+
 from setuptools import setup, find_packages
 
 this_directory = os.path.abspath(os.path.dirname(__file__))
 
 setup_requirements = ['pytest-runner', ]
+version = '0.1.3'
 
 
 def read_file(filename):
@@ -36,7 +38,7 @@ setup(
     packages=find_packages(include=['pytest_relative_path']),
     setup_requires=setup_requirements,
     url='https://github.com/hanzhichao/pytest-relative-path',
-    version='0.1.2',
+    version=version,
     zip_safe=True,
     install_requires=[
         'pytest',
